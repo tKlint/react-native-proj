@@ -15,43 +15,40 @@ export default function AnimatedExp() {
     //   easing: Easing.linear,
     //   useNativeDriver: true
     // }).start()
-    Animated.sequence([
-       Animated.timing(opacity, {
+    Animated.parallel([
+       Animated.spring(opacity, {
         toValue: 1,
-        duration: 1000,
-        easing: Easing.linear,
+        // duration: 1000,
+        // easing: Easing.linear,
         useNativeDriver: true
       }),
-      Animated.timing(rotate, {
+      Animated.spring(rotate, {
         toValue: 1,
-        duration: 800,
-        easing: Easing.linear,
+        // duration: 500,
+        // easing: Easing.linear,
         useNativeDriver: true
       }),
      
-    ]).start(() => fadeInHandle())
+    ]).start()
     // setOpacity(1)
   }
   const fadeOutHandle = () => {
-    console.log('ok')
-    if (opacity === new Animated.Value(0)) {
-      return
-    }
-    Animated.sequence([
-      Animated.timing(opacity, {
+    console.log('dd')
+    Animated.parallel([
+      Animated.spring(opacity, {
        toValue: 0,
-       duration: 1000,
-       easing: Easing.linear,
+      //  duration: 500,
+      //  easing: Easing.linear,
        useNativeDriver: true
      }),
-     Animated.timing(rotate, {
+     Animated.spring(rotate, {
        toValue: 0,
-       duration: 800,
-       easing: Easing.linear,
+      //  duration: 300,
+      //  easing: Easing.linear,
        useNativeDriver: true
-     }),
+     })
     
-   ]).start(() => fadeOutHandle())
+   ]).start()
     // Animated.timing(opacity, {
     //   toValue: 0,
     //   duration: 2000,
