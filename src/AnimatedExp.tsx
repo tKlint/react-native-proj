@@ -4,8 +4,8 @@ import { Animated, Easing, StyleSheet } from 'react-native'
 import { View, Text } from 'react-native'
 
 export default function AnimatedExp() {
-  const [opacity] = useState( new Animated.Value(0))
-  const [rotate] = useState( new Animated.Value(0))
+  const opacity = useRef( new Animated.Value(0)).current
+  const rotate = useRef( new Animated.Value(0)).current
 
   // const rotate = useRef(new Animated.Value(0)).current
   const fadeInHandle = () => {

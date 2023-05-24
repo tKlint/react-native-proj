@@ -19,15 +19,18 @@ import {
   extendTheme,
   VStack,
   Box,
+  StatusBar,
 } from "native-base";
 import NativeBaseIcon from "./components/NativeBaseIcon";
 import FreeModalExample from "./src/FreeModalExample";
 import BaseApiExample from "./src/BaseApiExample";
 import Example from "./src/KeyboardExample";
-import { Button, TextInput, View, Dimensions, Platform } from 'react-native';
+import { Button, TextInput, View, Dimensions, Platform, SafeAreaView } from 'react-native';
 import { PixelRatio } from "react-native";
 import LayoutAnimateExp from "./src/LayoutAnimateExp";
 import AnimatedExp from "./src/AnimatedExp";
+import AnimatedEventExp from './src/AnimatedEventExp';
+import PanResponderExp from "./src/PanResponderExp";
 
 // Define the config
 const config = {
@@ -41,11 +44,15 @@ export const theme = extendTheme({ config });
 export default function App() {
   return (
     <NativeBaseProvider>
+      <StatusBar backgroundColor="blue" barStyle={'dark-content'} />
+      <SafeAreaView style={{ backgroundColor: 'pink' }} />
       {/* <FreeModalExample /> */}
       {/* <BaseApiExample /> */}
       {/* <Example /> */}
       {/* <LayoutAnimateExp /> */}
-      <AnimatedExp />
+      {/* <AnimatedExp /> */}
+      {/* <AnimatedEventExp /> */}
+      <PanResponderExp />
     </NativeBaseProvider>
   );
 }
