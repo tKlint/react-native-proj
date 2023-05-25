@@ -1,25 +1,23 @@
-import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import Home from "./views/Home";
-import Detail from "./views/Detail";
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
+import 'react-native-gesture-handler';
 
-const Stack = createNativeStackNavigator()
+import Detail from './views/Detail';
+import Home, { MyTabs } from './views/Home';
 
-export default function App() {
+const Drawer = createDrawerNavigator();
+
+function MyDrawer() {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{
-        headerTintColor: '#fb7299',
-        headerStyle: {
-          backgroundColor: 'skyblue',
-        },
-        headerTitleStyle: {
-          fontWeight: 'bold',
-        },
-      }}> 
-        <Stack.Screen name="Home" component={Home} options={{ title: '首页' }} />
-        <Stack.Screen name="Detail" component={Detail} options={{ title: '详情' }} />
-      </Stack.Navigator>
+       {/* <Drawer.Navigator>
+        <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Detail" component={Detail} />
+      </Drawer.Navigator> */}
+      <MyTabs />
     </NavigationContainer>
-  )
+   
+  );
 }
+
+export default MyDrawer
