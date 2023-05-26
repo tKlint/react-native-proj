@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarnpkg add react-native-pager-view@6.1.2
+  /usr/local/bin/node /usr/local/bin/yarn add @types/md5 -D
 
 PATH: 
-  /Users/qikun/Desktop/my-app/node_modules/.bin:/Users/qikun/Desktop/my-app/node_modules/.bin:/Users/qikun/Desktop/node_modules/.bin:/Users/qikun/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/usr/local/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/usr/local/sbin
+  /usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/usr/local/sbin
 
 Yarn version: 
   1.22.19
@@ -44,13 +44,17 @@ npm manifest:
       "@react-navigation/material-top-tabs": "^6.6.2",
       "@react-navigation/native": "^6.1.6",
       "@react-navigation/native-stack": "^6.9.12",
+      "@reduxjs/toolkit": "^1.9.5",
       "expo": "^48.0.0",
+      "expo-av": "~13.2.1",
       "expo-status-bar": "~1.4.4",
+      "md5": "^2.3.0",
       "native-base": "3.4.0",
       "react": "18.2.0",
       "react-dom": "18.2.0",
       "react-native": "0.71.3",
       "react-native-gesture-handler": "~2.9.0",
+      "react-native-pager-view": "6.1.2",
       "react-native-paper": "^5.8.0",
       "react-native-reanimated": "~2.14.4",
       "react-native-safe-area-context": "4.5.0",
@@ -58,12 +62,14 @@ npm manifest:
       "react-native-svg": "13.4.0",
       "react-native-tab-view": "^3.5.1",
       "react-native-vector-icons": "^9.2.0",
-      "react-native-web": "~0.18.11"
+      "react-native-web": "~0.18.11",
+      "react-redux": "^8.0.5"
     },
     "devDependencies": {
       "@babel/core": "^7.20.0",
       "@types/react": "~18.0.27",
       "@types/react-native": "~0.64.12",
+      "@types/react-redux": "^7.1.25",
       "typescript": "^4.9.4"
     },
     "bugs": {
@@ -1117,7 +1123,7 @@ Lockfile:
     resolved "https://registry.npmmirror.com/@babel/regjsgen/-/regjsgen-0.8.0.tgz#f0ba69b075e1f05fb2825b7fad991e7adbb18310"
     integrity sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==
   
-  "@babel/runtime@^7.0.0", "@babel/runtime@^7.18.6", "@babel/runtime@^7.20.0", "@babel/runtime@^7.6.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
+  "@babel/runtime@^7.0.0", "@babel/runtime@^7.12.1", "@babel/runtime@^7.18.6", "@babel/runtime@^7.20.0", "@babel/runtime@^7.6.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
     version "7.21.5"
     resolved "https://registry.npmmirror.com/@babel/runtime/-/runtime-7.21.5.tgz#8492dddda9644ae3bda3b45eabe87382caee7200"
     integrity sha512-8jI69toZqqcsnqGGqwGS4Qb1VwLOEp4hz+CXPywcvjs60u3B4Pom/U/7rm4W8tMOYEB+E9wgD0mW1l3r8qlI9Q==
@@ -2738,6 +2744,16 @@ Lockfile:
     dependencies:
       "@react-types/shared" "^3.18.0"
   
+  "@reduxjs/toolkit@^1.9.5":
+    version "1.9.5"
+    resolved "https://registry.npmmirror.com/@reduxjs/toolkit/-/toolkit-1.9.5.tgz#d3987849c24189ca483baa7aa59386c8e52077c4"
+    integrity sha512-Rt97jHmfTeaxL4swLRNPD/zV4OxTes4la07Xc4hetpUW/vc75t5m1ANyxG6ymnEQ2FsLQsoMlYB2vV1sO3m8tQ==
+    dependencies:
+      immer "^9.0.21"
+      redux "^4.2.1"
+      redux-thunk "^2.4.2"
+      reselect "^4.1.8"
+  
   "@segment/loosely-validate-event@^2.0.0":
     version "2.0.0"
     resolved "https://registry.npmmirror.com/@segment/loosely-validate-event/-/loosely-validate-event-2.0.0.tgz#87dfc979e5b4e7b82c5f1d8b722dfd5d77644681"
@@ -2794,6 +2810,14 @@ Lockfile:
     resolved "https://registry.npmmirror.com/@types/hammerjs/-/hammerjs-2.0.41.tgz#f6ecf57d1b12d2befcce00e928a6a097c22980aa"
     integrity sha512-ewXv/ceBaJprikMcxCmWU1FKyMAQ2X7a9Gtmzw8fcg2kIePI1crERDM818W+XYrxqdBBOdlf2rm137bU+BltCA==
   
+  "@types/hoist-non-react-statics@^3.3.0", "@types/hoist-non-react-statics@^3.3.1":
+    version "3.3.1"
+    resolved "https://registry.npmmirror.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
+    integrity sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==
+    dependencies:
+      "@types/react" "*"
+      hoist-non-react-statics "^3.3.0"
+  
   "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
     version "2.0.4"
     resolved "https://registry.npmmirror.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.4.tgz#8467d4b3c087805d63580480890791277ce35c44"
@@ -2842,6 +2866,25 @@ Lockfile:
     dependencies:
       "@types/react" "^17"
   
+  "@types/react-redux@^7.1.25":
+    version "7.1.25"
+    resolved "https://registry.npmmirror.com/@types/react-redux/-/react-redux-7.1.25.tgz#de841631205b24f9dfb4967dd4a7901e048f9a88"
+    integrity sha512-bAGh4e+w5D8dajd6InASVIyCo4pZLJ66oLb80F9OBLO1gKESbZcRCJpTT6uLXX+HAB57zw1WTdwJdAsewuTweg==
+    dependencies:
+      "@types/hoist-non-react-statics" "^3.3.0"
+      "@types/react" "*"
+      hoist-non-react-statics "^3.3.0"
+      redux "^4.0.0"
+  
+  "@types/react@*":
+    version "18.2.7"
+    resolved "https://registry.npmmirror.com/@types/react/-/react-18.2.7.tgz#dfb4518042a3117a045b8c222316f83414a783b3"
+    integrity sha512-ojrXpSH2XFCmHm7Jy3q44nXDyN54+EYKP2lBhJ2bqfyPj6cIUW/FZW/Csdia34NQgq7KYcAlHi5184m4X88+yw==
+    dependencies:
+      "@types/prop-types" "*"
+      "@types/scheduler" "*"
+      csstype "^3.0.2"
+  
   "@types/react@^17":
     version "17.0.59"
     resolved "https://registry.npmmirror.com/@types/react/-/react-17.0.59.tgz#5aa4e161a356fcb824d81f166e01bad9e82243bb"
@@ -2869,6 +2912,11 @@ Lockfile:
     version "2.0.1"
     resolved "https://registry.npmmirror.com/@types/stack-utils/-/stack-utils-2.0.1.tgz#20f18294f797f2209b5f65c8e3b5c8e8261d127c"
     integrity sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==
+  
+  "@types/use-sync-external-store@^0.0.3":
+    version "0.0.3"
+    resolved "https://registry.npmmirror.com/@types/use-sync-external-store/-/use-sync-external-store-0.0.3.tgz#b6725d5f4af24ace33b36fafd295136e75509f43"
+    integrity sha512-EwmlvuaxPNej9+T4v5AuBPJa2x2UOJVdjCtDHgcDqitUeOtjnJKJ+apYjVcAoBEMjKW1VVFGZLUb5+qqa09XFA==
   
   "@types/yargs-parser@*":
     version "21.0.0"
@@ -4238,6 +4286,11 @@ Lockfile:
       path-browserify "^1.0.0"
       url-parse "^1.5.9"
   
+  expo-av@~13.2.1:
+    version "13.2.1"
+    resolved "https://registry.npmmirror.com/expo-av/-/expo-av-13.2.1.tgz#ce502a4c5d4a57962fd9f5f1a40c76c39c88f5ee"
+    integrity sha512-mC0mYSzaOaZgXjzhW2l4Ag325JjH6q5IbptfwD7gkMOFYy7VPOMxEMUnetadbs3DDzmgE6vUWrTjUIUbwq59qg==
+  
   expo-constants@~14.2.0, expo-constants@~14.2.1:
     version "14.2.1"
     resolved "https://registry.npmmirror.com/expo-constants/-/expo-constants-14.2.1.tgz#b5b6b8079d2082c31ccf2cbc7cf97a0e83c229c3"
@@ -4792,7 +4845,7 @@ Lockfile:
     dependencies:
       source-map "^0.7.3"
   
-  hoist-non-react-statics@^3.3.0:
+  hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
     version "3.3.2"
     resolved "https://registry.npmmirror.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
     integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
@@ -4851,6 +4904,11 @@ Lockfile:
     version "0.6.3"
     resolved "https://registry.npmmirror.com/image-size/-/image-size-0.6.3.tgz#e7e5c65bb534bd7cdcedd6cb5166272a85f75fb2"
     integrity sha512-47xSUiQioGaB96nqtp5/q55m0aBQSQdyIloMOc/x+QVTDZLNmXE892IIDrJ0hM1A5vcNUDD5tDffkSP5lCaIIA==
+  
+  immer@^9.0.21:
+    version "9.0.21"
+    resolved "https://registry.npmmirror.com/immer/-/immer-9.0.21.tgz#1e025ea31a40f24fb064f1fef23e931496330176"
+    integrity sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA==
   
   import-fresh@^2.0.0:
     version "2.0.0"
@@ -5607,7 +5665,7 @@ Lockfile:
     dependencies:
       buffer-alloc "^1.1.0"
   
-  md5@^2.2.1:
+  md5@^2.2.1, md5@^2.3.0:
     version "2.3.0"
     resolved "https://registry.npmmirror.com/md5/-/md5-2.3.0.tgz#c3da9a6aae3a30b46b7b0c349b87b110dc3bda4f"
     integrity sha512-T1GITYmFaKuO91vxyoQMFETst+O71VUPEU3ze5GNzDm0OWdP8v1ziTaAEPUr/3kLsY3Sftgz242A1SetQiDL7g==
@@ -6913,6 +6971,11 @@ Lockfile:
       prop-types "^15.6.2"
       react-native-iphone-x-helper "^1.0.3"
   
+  react-native-pager-view@6.1.2:
+    version "6.1.2"
+    resolved "https://registry.npmmirror.com/react-native-pager-view/-/react-native-pager-view-6.1.2.tgz#3522079b9a9d6634ca5e8d153bc0b4d660254552"
+    integrity sha512-qs2KSFc+7N7B+UZ6SG2sTvCkppagm5fVyRclv1KFKc7lDtrhXLzN59tXJw575LDP/dRJoXsNwqUAhZJdws6ABQ==
+  
   react-native-paper@^5.8.0:
     version "5.8.0"
     resolved "https://registry.npmmirror.com/react-native-paper/-/react-native-paper-5.8.0.tgz#ac6b98a9d8fe96d959d2a6a92454e10626177970"
@@ -7024,6 +7087,18 @@ Lockfile:
       whatwg-fetch "^3.0.0"
       ws "^6.2.2"
   
+  react-redux@^8.0.5:
+    version "8.0.5"
+    resolved "https://registry.npmmirror.com/react-redux/-/react-redux-8.0.5.tgz#e5fb8331993a019b8aaf2e167a93d10af469c7bd"
+    integrity sha512-Q2f6fCKxPFpkXt1qNRZdEDLlScsDWyrgSj0mliK59qU6W5gvBiKkdMEG2lJzhd1rCctf0hb6EtePPLZ2e0m1uw==
+    dependencies:
+      "@babel/runtime" "^7.12.1"
+      "@types/hoist-non-react-statics" "^3.3.1"
+      "@types/use-sync-external-store" "^0.0.3"
+      hoist-non-react-statics "^3.3.2"
+      react-is "^18.0.0"
+      use-sync-external-store "^1.0.0"
+  
   react-refresh@^0.4.0:
     version "0.4.3"
     resolved "https://registry.npmmirror.com/react-refresh/-/react-refresh-0.4.3.tgz#966f1750c191672e76e16c2efa569150cc73ab53"
@@ -7080,6 +7155,18 @@ Lockfile:
       esprima "~4.0.0"
       source-map "~0.6.1"
       tslib "^2.0.1"
+  
+  redux-thunk@^2.4.2:
+    version "2.4.2"
+    resolved "https://registry.npmmirror.com/redux-thunk/-/redux-thunk-2.4.2.tgz#b9d05d11994b99f7a91ea223e8b04cf0afa5ef3b"
+    integrity sha512-+P3TjtnP0k/FEjcBL5FZpoovtvrTNT/UXd4/sluaSyrURlSlhLSzEdfsTBW7WsKB6yPvgd7q/iZPICFjW4o57Q==
+  
+  redux@^4.0.0, redux@^4.2.1:
+    version "4.2.1"
+    resolved "https://registry.npmmirror.com/redux/-/redux-4.2.1.tgz#c08f4306826c49b5e9dc901dee0452ea8fce6197"
+    integrity sha512-LAUYz4lc+Do8/g7aeRa8JkyDErK6ekstQaqWQrNRW//MY1TvCEpMtpTWvlQ+FPbWCx+Xixu/6SHt5N0HR+SB4w==
+    dependencies:
+      "@babel/runtime" "^7.9.2"
   
   regenerate-unicode-properties@^10.1.0:
     version "10.1.0"
@@ -7176,7 +7263,7 @@ Lockfile:
     resolved "https://registry.npmmirror.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
     integrity sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==
   
-  reselect@^4.0.0:
+  reselect@^4.0.0, reselect@^4.1.8:
     version "4.1.8"
     resolved "https://registry.npmmirror.com/reselect/-/reselect-4.1.8.tgz#3f5dc671ea168dccdeb3e141236f69f02eaec524"
     integrity sha512-ab9EmR80F/zQTMNeneUr4cv+jSwPJgIlvEmVwLerwrWVbpLlBuls9XHzIeTFy4cegU2NHBp3va0LKOzU5qFEYQ==
